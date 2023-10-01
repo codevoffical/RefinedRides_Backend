@@ -1,9 +1,9 @@
 const dbConstants = require("./dbConstants");
-const messageConstants = require("./messageConstants");
+const messages = require("./messageConstants");
 const urlConstants = require("./urlConstants");
 
 module.exports = {
 	dbConstants,
-	messageConstants,
+	messages,
 	urlConstants
 };
