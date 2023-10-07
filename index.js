@@ -5,6 +5,7 @@ const colors = require("colors");
 const auth = require("./routes/auth");
 const morgan = require("morgan");
 const { errorHandler } = require("./middleware");
+const { connectDB } = require("./config/db");
 
 const app = express();
 
@@ -23,6 +24,8 @@ app.use("/", auth);
 const PORT = process.env.PORT || 8083;
 
 app.use(errorHandler);
+
+connectDB();
 
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`.cyan);
