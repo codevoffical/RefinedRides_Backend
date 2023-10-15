@@ -1,4 +1,4 @@
-const { messages } = require("../constants");
+import { messageConstansts as messages } from "../constants/messageConstants.js";
 
 const errorHandler = (err, req, res, next) => {
 	const statusCode = err.statusCode || 500;
@@ -12,4 +12,4 @@ const errorHandler = (err, req, res, next) => {
 	res.status(statusCode).json(errObj);
 };
 
-module.exports = errorHandler;
+export default errorHandler;

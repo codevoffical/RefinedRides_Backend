@@ -1,5 +1,5 @@
-const config = require("../config/config");
+import { config } from "../config/config.js";
 
-module.exports = {
+export const urlConstants = {
 	signUp: config.basePath("/auth/signup")
 };

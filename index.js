@@ -1,11 +1,11 @@
-const express = require("express");
-const dotenv = require("dotenv").config();
-const cors = require("cors");
-const colors = require("colors");
-const auth = require("./routes/auth");
-const morgan = require("morgan");
-const { errorHandler } = require("./middleware");
-const { connectDB } = require("./config/db");
+import express from "express";
+import morgan from "morgan";
+import dotenv from "dotenv/config";
+import colors from "colors";
+import cors from "cors"
+import auth from "./routes/auth.js";
+import errorHandler from "./middleware/errorHandler.js"
+import connectDB from "./config/db.js";
 
 const app = express();
 

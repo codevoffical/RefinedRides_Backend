@@ -1,5 +1,1 @@
-class Auth {
-	async signUp({ req }) {}
-}
-
-module.exports = new Auth();
+export const signUp = async ({ req }) => {};

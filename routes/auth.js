@@ -1,14 +1,14 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const urlConstants = require("../constants/urlConstants");
-const { auth } = require("../controllers");
+import { urlConstants as url } from "../constants/urlConstants.js";
+import { signUp } from "../controllers/authController.js";
 
-router.post(urlConstants.signUp, async (req, res, next) => {
+router.post(url.signUp, async (req, res, next) => {
 	try {
-		const result = await auth.signUp({ req });
+		const result = await signUp({ req });
 	} catch (error) {
 		next(error);
 	}
 });
 
-module.exports = router;
+export default router;

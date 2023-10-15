@@ -1,3 +1,3 @@
-module.exports = {
-    something_went_wrong: "Something went wrong!"
-}
+export const messageConstansts = {
+	something_went_wrong: "Something went wrong!"
+};
